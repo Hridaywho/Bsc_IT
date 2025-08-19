@@ -1,0 +1,4 @@
+digitalRead();
+digitalWrite();
+analogRead();
+analogWrite();

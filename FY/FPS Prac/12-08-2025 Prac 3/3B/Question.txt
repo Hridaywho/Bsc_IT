@@ -1,0 +1,1 @@
+Writ a C program to calculate the fctorial of a given number. 

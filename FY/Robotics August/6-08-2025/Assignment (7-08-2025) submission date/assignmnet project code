@@ -1,0 +1,40 @@
+
+🔌 Wiring for Wokwi:
+LED Color	Arduino Pin
+Red	10
+Yellow	9
+Green	8
+
+Each LED should have a resistor (220Ω) in series with its cathode going to GND.
+
+✅ Arduino Code (.ino file):
+cpp
+Copy
+Edit
+#define RED_LED 10
+#define YELLOW_LED 9
+#define GREEN_LED 8
+
+void setup() {
+  pinMode(RED_LED, OUTPUT);
+  pinMode(YELLOW_LED, OUTPUT);
+  pinMode(GREEN_LED, OUTPUT);
+}
+
+void loop() {
+  // Green on - Go
+  digitalWrite(GREEN_LED, HIGH);
+  digitalWrite(YELLOW_LED, LOW);
+  digitalWrite(RED_LED, LOW);
+  delay(5000); // Green for 5 seconds
+
+  // Yellow on - Prepare to stop
+  digitalWrite(GREEN_LED, LOW);
+  digitalWrite(YELLOW_LED, HIGH);
+  delay(2000); // Yellow for 2 seconds
+
+  // Red on - Stop
+  digitalWrite(YELLOW_LED, LOW);
+  digitalWrite(RED_LED, HIGH);
+  delay(5000); // Red for 5 seconds
+}

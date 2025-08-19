@@ -1,0 +1,12 @@
+create table emp(
+	id int primary key, 
+	name varchar(50),
+	DOJ date,
+	age int,
+	location varchar (20),
+	salary int,
+	exp varchar(10),
+	department varchar (20)
+);
+
+select * from emp 
